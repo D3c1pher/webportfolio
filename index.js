@@ -1,7 +1,7 @@
 {
     "capstone": {
 
-        "liveLink": "<github page link>",
+        "liveLink": "https://d3c1pher.github.io/webportfolio/",
 
         "name": "Norven Caracas",
 
