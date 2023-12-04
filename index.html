@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--====== MOBILE RESPONSIVE META TAG ======-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--====== GOOGLE FONTS LINK ======-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&family=Passion+One:wght@400;700;900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!--====== BOOTSTRAP 5 LINK ======-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <!--====== ICON LIBRARY LINK ======-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- FADE IN ANIMATION LINK -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+
+        <!--====== CUSTOM STYLE CSS LINK ======-->
+        <link rel="stylesheet" type="text/css" href="./index.css">
+
+        <title>Norven Caracas</title>
+    </head>
+
+    <body>
+        <!--====== PARALLAX HERO SECTION START ======-->
+        <header id="parallax" class="top">
+
+            <!-- PARALLAX HERO TITLE -->
+            <div id="hero-section" class="d-flex flex-column justify-content-end align-items-center text-center text-light text-uppercase">
+                <div class="hero-title">
+                    <h1>Transforming <span class="d-block">visions into</span> virtual realities</h1>
+                    <a href="#about-link">
+                        <button type="button" class="btn btn-primary btn-lg my-2 px-4 py-4 rounded text-center" href="#about-link">Explore</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PARALLAX HERO IMAGES -->
+            <img id="parallax-bg" class="parallax-img img-fluid" src="./images/parallax/plaguefallen-city-bg.png" alt="Plaguefallen City" />
+            <img id="parallax-dust" class="parallax-img img-fluid" src="./images/parallax/dust-texture.png" alt="Dust Texture" />
+            <img id="parallax-foreground-back" class="parallax-img img-fluid" src="./images/parallax/foreground-back.png" alt="Foreground Back Color" />
+            <img id="parallax-foreground-front" class="parallax-img img-fluid" src="./images/parallax/foreground-front.png" alt="Foreground Front Color" />
+            <img id="parallax-rays" class="parallax-img img-fluid no-display" src="./images/parallax/ray-effect.png" alt="Ray Effect" />
+            <img id="parallax-plague-doctor" class="parallax-img img-fluid no-display" src="./images/parallax/plague-doctor.png" alt="Plague Doctor" />
+        </header>
+        <!--====== PARALLAX HERO SECTION END ======-->
+
+        <!--====== ============================== ======-->
+
+        <!--====== MAIN CONTENT SECTION START ======-->
+        <main class="main-content">
+
+            <!--====== MENU NAVIGATION SECTION START ======-->
+            <div id="sidenav" class="sidenav text-uppercase sticky-top">
+                <a href="#about-link" id="sidenav-about" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        About Me
+                    </div>
+                    <div>
+                        <i class="mdi-social-person small"></i>
+                    </div>
+                </a>
+                
+                <a href="#experience-link" id="sidenav-experience" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        Experience
+                    </div>
+                    <div>
+                        <i class="mdi-action-trending-up small"></i>
+                    </div>
+                </a>
+                <a href="#projects-link" id="sidenav-projects" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        Projects
+                    </div>
+                    <div>
+                        <i class="mdi-action-description small"></i>
+                    </div>
+                </a>
+                <a href="#gallery-link" id="sidenav-gallery" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        Gallery
+                    </div>
+                    <div>
+                        <i class="material-icons">bookmark</i>
+                    </div>
+                </a>
+                <a href="#skills-link" id="sidenav-skills" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        Skills
+                    </div>
+                    <div>
+                        <i class="mdi-av-equalizer small"></i>
+                    </div>
+                </a>
+                <a href="#contact-link" id="sidenav-contact" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        Contact
+                    </div>
+                    <div>
+                        <i class="mdi-content-mail small"></i>
+                    </div>
+                </a>
+            </div>
+            <!--====== MENU NAVIGATION SECTION END ======-->
+
+            <!--====== ABOUT SECTION START ======-->
+            <Section id="about-section" class="min-vh-100 m-0 p-0">
+                <svg class="curved-svg-start fill-origin" viewBox="0 0 1440 320">
+                    <path fill-opacity="1" d="M0,320L288,64L576,192L864,160L1152,128L1440,160L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path>
+                </svg>
+                <div id="about-link" class="container-fluid px-5">
+                    <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
+                        <div class="col-12 col-md-6 order-2 order-md-1">
+                            <h2 class="greeting text-uppercase"><span class="d-block">Heylo!</span>My name is.</h2>
+                            <h2 class="name text-uppercase">Norven Caracas</h2>
+                            <h3 class="job mt-2">&lt;Full-Stack Developer&gt; <span class="d-none d-md-inline">|</span> <span class="d-block d-md-inline">Graphic Artist</span>  </h3>
+                            <p class="intro-1 p-0 mt-4">I am a <span>creative thinker</span> with a passion for creating beautiful fun things.</p>
+                            <p class="intro-2 p-0 mt-2">I've always sought out opportunities and challenges that pushes my creative drive and stirs my technical mind.</p>
+                        </div>
+                        <div class="col-12 col-md-6 order-1 order-md-2">
+                            <img class="img-fluid" src="images/profile/norven-profile-01.png" alt="Norven's Profile">
+                        </div>
+                    </div>
+                </div>
+                <svg class="curved-svg-end" viewBox="0 0 1440 319">
+                    <path fill-opacity="1" d="M0,224L480,288L960,224L1440,64L1440,320L960,320L480,320L0,320Z"></path>
+                </svg>
+            </Section>
+            <!--====== ABOUT SECTION END ======-->
+
+            <!--====== EXPERIENCE SECTION START ======-->
+            <Section id="experience-section" class="min-vh-100 m-0 p-0">
+                <svg class="curved-svg-start fill-origin" viewBox="0 0 1440 320">
+                    <path fill-opacity="1" d="M0,320L288,64L576,192L864,160L1152,128L1440,160L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path>
+                </svg>
+                <div id="experience-link" class="py-3">
+                    <h2 class="guide text-center text-uppercase px-5 mt-5">Experience</h2>
+                </div>
+                <hr class="text-light">
+                <div id="experience-content" class="container-fluid p-0 m-0">
+                    <div class="d-flex flex-column align-items-center align-items-lg-start mx-lg-5">
+                        <div class="content col-8 col-lg-6 p-5 mt-5 mx-lg-5 rounded">
+                            <div>
+                                <hr class="line rounded">
+                                <h3 class="py-2">NEC Telecom Software Philippines</h3>
+                                <h4 class="py-2">Junior Programmer</h4>
+                                <p class="py-2">Developed impactful solutions in Unity 3D, leveraging my expertise in C# and Python. I worked for the XR and 3D Development Team in the implementing and reviewing of code for LiDAR technologies ensuring successful integration of 3D solutions.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h3 class="py-2">GGS Technical Information Services Inc.</h3>
+                                <h4 class="py-2">Technical Illustrator/Parts Analyst</h4>
+                                <p class="py-2">Illustrated and QAed for multiple departments ranging from image manipulation, technical illustration and graphic design. I have worked on packaging designs, infographics and vector drawings. I have also Laid out and exploded technical illustrations of automobiles and construction vehicles.</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h3 class="py-2">Freelance</h3>
+                                <h4 class="py-2">Multimedia Artist</h4>
+                                <p class="py-2">Produced multimedia graphics and animation for client commissions. Created logos, vectors, posters, banners, infographics and 2D animations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <svg class="curved-svg-end fill-origin" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,256C960,213,1200,107,1320,53.3L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+                </div>
+                
+            </Section>
+    
+            <!--====== EXPERIENCE SECTION END ======-->
+
+            <!--====== PROJECTS SECTION START ======-->
+            <Section id="projects-section" class="min-vh-100 m-0 p-0">
+                <svg class="curved-svg-start fill-origin" viewBox="0 0 1440 320">
+                    <path fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,138.7C384,128,480,160,576,154.7C672,149,768,107,864,112C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                </svg>
+
+                <div id="projects-link" class="container-fluid my-5">
+                    
+                    <!-- WEB DEVELOPMENT WORK START -->
+                    <div class="row px-md-5 d-flex justify-content-center align-items-start text-center text-md-start">
+
+                        <h2 class="guide text-center text-uppercase px-5 mt-5">Projects</h2>
+                        <hr class="text-light">
+
+                        <h3 class="sub-guide text-center text-uppercase py-5">Web Development Work</h3>
+
+                        <div class="d-flex justify-content-center align-items-stretch col-12 col-sm-6 col-lg-3">
+                            <div class="card">
+                                
+                                <img src="./images/projects/ux-ui-designs.jpg" alt="Card image cap">
+                                
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase">UX/UI Designs</h5>
+                                    <p class="card-text">UX/UI design is a comprehensive approach to crafting digital products. UX focuses on improving user satisfaction through research and testing, while UI concentrates on creating visually appealing and user-friendly interfaces.
+                                    </p>
+                                    
+                                    <div class="d-flex pt-3 justify-content-between align-items-center">
+                                        <div>
+                                            <p class="card-text card-time">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end p-0 m-0">
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">link</i>      
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">search</i>
+                                                </a>
+                                            </div> 
+                                        </div>                             
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-stretch col-12 col-sm-6 col-lg-3">
+                            <div class="card">
+                                <img src="./images/projects/e-commerce.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase">E-Commerce</h5>
+                                    <p class="card-text">E-commerce, or electronic commerce, is the online buying and selling of goods and services. It enables transactions over the internet, offering a convenient way for businesses and consumers to engage in trade without physical presence.</p>
+                                    
+                                    <div class="d-flex pt-3 justify-content-between align-items-center">
+                                        <div>
+                                            <p class="card-text card-time">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end p-0 m-0">
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">link</i>      
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">search</i>
+                                                </a>
+                                            </div> 
+                                        </div>                             
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-stretch col-12 col-sm-6 col-lg-3">
+                            <div class="card">
+                                <img src="./images/projects/online-booking-systems.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase">Online Booking Systems</h5>
+                                    <p class="card-text">An online booking system is a digital platform that enables users to schedule and confirm appointments or reservations over the internet, streamlining the booking process for businesses and customers.</p>
+                                    
+                                    <div class="d-flex pt-3 justify-content-between align-items-center">
+                                        <div>
+                                            <p class="card-text card-time">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end p-0 m-0">
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">link</i>      
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">search</i>
+                                                </a>
+                                            </div> 
+                                        </div>                             
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-stretch col-12 col-sm-6 col-lg-3">
+                            <div class="card">
+                                <img src="./images/projects/browser games.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase">Browser Games</h5>
+                                    <p class="card-text">Browser games are online video games played directly in a web browser without downloads. They use web technologies like HTML5 and JavaScript, offering accessibility and diverse genres without the need for dedicated gaming platforms.</p>
+                                    
+                                    <div class="d-flex pt-3 justify-content-between align-items-center">
+                                        <div>
+                                            <p class="card-text card-time">
+                                                <small class="text-muted">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end p-0 m-0">
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">link</i>      
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                  <i class="material-icons">search</i>
+                                                </a>
+                                            </div> 
+                                        </div>                             
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- WEB DEVELOPMENT WORK END -->
+
+                        <!-- GRAPHIC ART WORK START -->
+                        <div id="gallery-link" class="py-3">
+                            <h2 class="guide text-center text-uppercase px-5 mt-5">Gallery</h2>
+                        </div>
+                        <hr class="text-light">
+
+                        <h3 id="gallery" class="sub-guide text-center text-uppercase py-5">Graphic Artwork</h3>
+
+                        <!-- Gallery -->
+                        <div class="col-12">
+                            <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
+                                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                    <img
+                                        src="./images/gallery/graphic-sample-01.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-02.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-03.jpg"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-04.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                </div>
+                            
+                                <div class="col-lg-4 mb-4 mb-lg-0">
+                                    <img
+                                        src="./images/gallery/graphic-sample-05.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/Christmas Party Banner 2022 - 83.82cm x 200.66cm (33in x 79in).png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-06.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-07.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                </div>
+                            
+                                <div class="col-lg-4 mb-4 mb-lg-0">
+                                    <img
+                                        src="./images/gallery/graphic-sample-08.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-09.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-10.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                    <img
+                                        src="./images/gallery/graphic-sample-11.png"
+                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- GRAPHIC ART WORK END -->
+                    </div>
+                </div>
+                <svg class="curved-svg-end fill-origin" viewBox="0 0 1440 319">
+                    <path fill-opacity="1" d="M0,160L120,186.7C240,213,480,267,720,272C960,277,1200,235,1320,213.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+                </svg>
+            </Section>
+            <!--====== PROJECTS SECTION END ======-->
+
+            <!--====== SKILLS SECTION START ======-->
+            <Section id="skills-section" class="min-vh-100 m-0 p-0">
+                <svg class="curved-svg-start fill-origin" viewBox="0 0 1440 320">
+                    <path fill-opacity="1" d="M0,256L80,250.7C160,245,320,235,480,197.3C640,160,800,96,960,106.7C1120,117,1280,203,1360,245.3L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                </svg>
+
+                <div id="skills-link" class="container-fluid pb-5 mt-5">
+                    <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
+                        
+                        <h2 class="guide text-center text-uppercase px-5 mt-5">Skills</h2>
+                        <hr class="text-light">
+
+                        <div class="col-12 my-5">
+                            <div class="row d-flex justify-content-center align-items-stretch">
+                                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                    
+                                    <div class="skill-card row d-flex justify-content-center align-items-center text-center p-4 pb-5 rounded h-100 shadow">
+                                        <h3 class="text-uppercase p-2">Front-End</h3>
+                                        <hr class="text-light rounded p-0 m-0">
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-html5.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>HTML 5</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-css3.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>CSS 3</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-bootstrap.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Bootstrap 5</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-javascript.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Javascript</h4>
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="skill-card row d-flex justify-content-center align-items-center text-center p-4 pb-5 rounded h-100 shadow">
+                                        <h3 class="text-uppercase p-2">MERN Stack</h3>
+                                        <hr class="text-light rounded p-0 m-0">
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-mongodb.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>MongoDB</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-expressjs.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Express JS</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-react.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>React JS</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-nodejs.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Node JS</h4>
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="skill-card row d-flex justify-content-center align-items-center text-center p-4 pb-5 rounded h-100 shadow">
+                                        <h3 class="text-uppercase p-2">Tech Tools</h3>
+                                        <hr class="text-light rounded p-0 m-0">
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-heroku.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Heroku</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-git.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Git</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-postman.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Postman</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/logo-gitlab-ci-cd.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>GitLab CI/CD</h4>
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                                <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                    <div class="skill-card row d-flex justify-content-center align-items-center text-center p-4 pb-5 rounded h-100 shadow">
+                                        <h3 class="text-uppercase p-2">Multimedia</h3>
+                                        <hr class="text-light rounded p-0 m-0">
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/Adobe Photoshop CC.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Photoshop CC</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/Adobe Illustrator CC.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Illustrator CC</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/Adobe Animate CC.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Animate CC</h4>
+                                        </div>
+                                        <div class="tech col-6">
+                                            <img class="img-fluid" src="./images/skills/Adobe Indesign CC.png" alt="">
+                                            <hr class="text-light rounded p-0 m-0 pb-2">
+                                            <h4>Indesign CC</h4>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="text-light">
+                    </div>
+                    
+                </div>
+        
+                <svg class="curved-svg-end fill-origin" viewBox="0 0 1440 319">
+                    <path fill-opacity="1" d="M0,288L205.7,64L411.4,256L617.1,192L822.9,256L1028.6,160L1234.3,192L1440,128L1440,320L1234.3,320L1028.6,320L822.9,320L617.1,320L411.4,320L205.7,320L0,320Z"></path>
+                </svg>
+            </Section>
+            <!--====== SKILLS SECTION END ======-->
+
+            <!--====== CONTACT SECTION START ======-->
+            <Section id="contact-section" class="min-vh-100 m-0 p-0">
+                <svg class="curved-svg-start fill-origin" viewBox="0 0 1440 320">
+                    <path fill-opacity="1" d="M0,320L288,64L576,192L864,160L1152,128L1440,160L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path>
+                </svg>
+                <!-- <div class="guide px-md-5 mx-md-5">About</div> -->
+                <div id="contact-link" class="container-fluid px-5">
+
+                    <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
+
+                        <h2 class="guide text-center text-uppercase px-5 mt-5">Contact</h2>
+                        <hr class="text-light">
+
+                        <div class="col-12">
+                            <div class="row justify-content-center mb-5 text-dark">
+                                <div class="col-3 col-md-1">
+                                    <a href="https://www.facebook.com/profile.php?id=100085701498879" class="text-dark" id="facebook">
+                                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col-3 col-md-1">
+                                    <a href="https://www.linkedin.com/in/charles-babbage-8291a6211/" class="text-dark" id="linkedIn">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col-3 col-md-1">
+                                    <a href="https://gitlab.com/cbabbage0991" class="text-dark" id="gitlab">
+                                        <i class="fab fa-gitlab" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="col-3 col-md-1">
+                                    <a href="https://github.com/cbabbage0991" class="text-dark" id="github">
+                                        <i class="fab fa-github" aria-hidden="true"></i>                    
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-6 bg-primary rounded pt-4 pb-4">
+
+                            <!-- Form Section -->
+                            <form id="form-col">
+                                
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-number">Contact Number:</label>
+                                    <input type="number" class="form-control" id="contact-number" placeholder="Enter your contact number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="concern">Concern:</label>
+                                    <select class="form-control" id="concern">
+                                        <option>Quotation</option>
+                                        <option>Appointment</option>
+                                        <option>Follow-Up</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                                </div>
+
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalDiv">
+                                    Submit
+                                </button>
+                            </form>
+                            <!-- Form Section -->
+
+                        </div>
+                        
+                        <div class="d-none d-md-grid col-md-6 order-1 order-md-2">
+                            <img class="img-fluid" src="images/profile/plague-doctor-character.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <svg class="curved-svg-end fill-origin" viewBox="0 0 1440 319">
+                    <path fill-opacity="1" d="M0,224L480,288L960,224L1440,64L1440,320L960,320L480,320L0,320Z"></path>
+                </svg>
+            </Section>
+            <!--====== CONTACT SECTION END ======-->
+
+        </main>
+
+        <footer>
+
+        </footer>
+        <!--====== MAIN CONTENT SECTION END ======-->
+
+        <!-- Modal -->
+        <!-- <div clas" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!--====== BOOTSTRAP 5 SCRIPT START ======-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <!--====== BOOTSTRAP SCRIPT END ======-->
+
+        <!-- BOOTSTRAP 4 SCRIPT -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
+
+        <!--====== ANIMATION SCRIPT START ======-->
+        <script src="./index.js"></script>
+        <!--====== ANIMATION SCRIPT END ======-->
+    </body>
+</html>

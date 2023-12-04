@@ -1,0 +1,642 @@
+/* CSS RESET STYLING START */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,           
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS RESET STYLING END */
+
+/* ============================== */
+
+/* GENERAL STYLING START */
+:root {
+    /* Main Colors */
+    --main-color: rgb(0, 1, 31);
+    --sub-color: rgb(30, 50, 100);
+    --accent-color: #33BBC5;
+
+    /* Base Font Colors */
+    --dark-color-text: #D5D5D9;
+    --light-color-text: #08071d;
+
+    /* Background Colors */
+    --dark-color-bg: #060619;
+    --light-color-bg: #f6f6f6;
+
+    /* Section Colors */
+    --section01-color: rgb(15, 25, 55);
+    --section02-color: #1D2770;
+    --section03-color: #1196A0;
+    --section04-color: #891F5F;
+    --section05-color: #822388;
+    --section06-color: #AF283C;
+
+    /* Dark Mode Colors */
+    --dark-color-primary: #9594E6;
+    --dark-color-secondary: #891F5F;
+    --dark-color-accent: #891F5F;
+
+    /* Light Mode Colors */
+    --light-color-primary: #1b196b;
+    --light-color-secondary: #e076b5;
+    --light-color-accent: #af283c;
+
+    /* Special Fonts in use */
+    --special01-font: 'Londrina Solid', sans-serif;
+    --special02-font: 'Source Code Pro', monospace;
+    --special03-font: 'Press Start 2P', monospace;
+
+    /* Header Fonts in use */
+    --head01-font: 'Passion One', sans-serif;
+    --head02-font: 'Rubik', sans-serif;
+    
+    /* Content Fonts in use */
+    --content01-font: 'Roboto', sans-serif; 
+    --content01-font: 'Roboto Mono', monospace;
+
+
+    :root[data-theme="light"] {
+        --text: #0a0c29;
+        --background: #dedef7;
+        --primary: #1f2a7a;
+        --secondary: #d575db;
+        --accent: #bf3192;
+      }
+      :root[data-theme="dark"] {
+        --text: #d7d9f5;
+        --background: #080820;
+        --primary: #8590e0;
+        --secondary: #822388;
+        --accent: #ce40a1;
+      }
+}
+
+* {
+	z-index: 999; 
+}
+	
+html {
+	/* color-scheme: dark; */
+    /* color-scheme: light; */
+	scroll-behavior: smooth;
+}
+	
+body {
+	background-color: var(--main-color);
+}
+	
+.no-highlight{
+	user-select: none;
+}
+
+.card {
+    width: 18rem;
+}
+
+.guide {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.sub-guide {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* .line {
+    border-width: 1.5rem;
+    color: #2196F3;
+    opacity: 1;
+    width: 8rem;
+} */
+
+/* .modal-backdrop {
+    z-index: -1;
+} */
+
+/* Fill Color */
+.fill-origin {
+	fill: var(--main-color);
+}
+/* GENERAL STYLING END */
+
+/* ============================== */
+
+/* PARALLAX STYLING START */
+#parallax {
+    position: relative;
+    z-index: 0;
+    min-height: 75vh;
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+#parallax > * {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+}
+
+#parallax > img {
+    width: 100%;
+}
+
+#hero-section {
+    --parallax-speed: 10;
+    z-index: 10;
+}
+
+.parallax-img {
+    pointer-events: none;
+}
+
+#parallax-bg {
+    --parallax-speed: 0;
+    z-index: 1;
+    min-height: 100%;
+    width: 100%;
+}
+
+#parallax-dust {
+    --parallax-speed: -15;
+    z-index: 2;
+    min-height: 100%;
+}
+
+#parallax-plague-doctor {
+    --parallax-speed: 15;
+    z-index: 4;
+    opacity: .9;
+}
+
+#parallax-rays {
+    --parallax-speed: -15;
+    z-index: 3;
+    min-height: 100%;
+}
+
+.brand-logo {
+    --parallax-speed: -10;
+    max-width: 200px;
+    position: relative;
+    cursor: pointer;
+    background: radial-gradient(rgba(0, 0, 0, 0.8), transparent 70%);
+}
+
+#parallax-foreground-front, #parallax-foreground-back {
+    z-index: 999;
+    align-self: end;
+}
+
+#parallax-foreground-back {
+    transform: scaleY(1.2);
+    transform-origin: bottom;
+    mix-blend-mode: hard-light;
+}
+
+@keyframes parallax {
+    to {
+        transform: translateY(calc(var(--parallax-speed) * 200px));
+    }
+}
+/* PARALLAX STYLING END */
+
+/* ============================== */
+
+/* NO PARALLAX STYLING START */
+@media only screen and (min-width: 768px) { 
+    #parallax-bg {
+    --parallax-speed: -1;
+    }
+}
+
+@media only screen and (max-width: 767px){ 
+    .no-display {
+        display: none;
+    }
+
+    .brand-logo {
+        justify-self: center;
+    }
+}
+/* NO PARALLAX STYLING END */
+
+/* ============================== */
+
+/* FADE-IN ANIMTION START */
+/* .animate-fade {
+    opacity: 0;
+  } */
+/* FADE-IN ANIMTION END */
+
+/* ============================== */
+
+/* SVG IRREGULAR SHAPE EFFECT STYLING START */
+.curved-svg-start {
+    display: block;
+    align-self: start;
+}
+
+.curved-svg-end {
+    display: block;
+    align-self: end;
+}
+/* SVG IRREGULAR SHAPE EFFECT STYLING END */
+
+/* ============================== */
+
+/* HERO SECTION STYLING START */
+#hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black;
+    z-index: -1;
+    scale: 2;
+    opacity: 0.5;
+    filter: blur(5rem);
+    translate: -50%;
+}
+
+.hero-title{
+	font-family: var(--special01-font);
+	font-size: 6rem;
+	line-height: 1;
+	font-weight: 900;
+	letter-spacing: 1rem;
+    margin-bottom: 13rem;
+}
+
+.hero-title button{
+
+	font-size: 2rem;
+	line-height: 0;
+	font-weight: 00;
+}
+
+	/* HERO SECTION MEDIA QUERIES START */
+@media only screen and (max-width: 1200px){ 
+
+	.hero-title {
+		font-size: 5rem;
+        margin-bottom: 8rem;
+        padding-inline: 10rem;
+	}
+}
+
+@media only screen and (max-width: 992px){ 
+
+	.hero-title {
+        letter-spacing: .8rem;
+        margin-bottom: 6rem;
+		
+	}
+}
+
+@media only screen and (max-width: 767px){ 
+    .hero-title {
+		font-size: 4rem;
+        padding-inline: 0rem;
+	}
+}
+
+@media only screen and (max-width: 576px){ 
+	.hero-title {
+		font-size: 2.5rem;
+		letter-spacing: 0.2rem;
+	}
+}	
+	/* HERO SECTION MEDIA QUERIES END */
+/* HERO SECTION STYLING END */
+
+/* ============================== */
+
+/* MAIN CONTENT STYLING START */
+.main-content {
+    position: relative;
+    background: var(--main-color);
+    padding-block: 1rem;
+    width: 100%;
+}
+/* MAIN CONTENT STYLING END */
+
+/* ============================== */
+
+/* MENU NAVIGATION DESKTOP STYLING START */
+#sidenav a {
+    position: absolute;
+    left: -140px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 200px;
+    text-decoration: none;
+    font-family: var(--special02-font);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    text-shadow: 2px 2px 5px rgba(0, 1, 31, 0.5);
+  }
+  
+#sidenav a:hover {
+    left: 0;
+}
+
+#sidenav-about {
+    top: 40px;
+    background-color: var(--section01-color);
+}
+
+#sidenav-experience {
+    top: 120px;
+    background-color: var(--section02-color);
+}
+
+#sidenav-projects {
+    top: 200px;
+    background-color: var(--section03-color);
+}
+
+#sidenav-gallery {
+    top: 280px;
+    background-color: var(--section04-color);
+}
+
+#sidenav-gallery i {
+    font-size:36px;
+}
+
+#sidenav-skills {
+    top: 360px;
+    background-color: var(--section05-color);
+}
+
+#sidenav-contact {
+    top: 440px;
+    background-color: var(--section06-color);
+}
+/* MENU NAVIGATION MOBILE STYLING START */
+
+/* ============================== */
+
+/* ABOUT SECTION STYLING START */
+#about-section .curved-svg-start {
+    fill: var(--main-color);
+}
+
+#about-section {
+    font-family: var(--head01-font);
+    color: var(--main-color);
+    background-color: var(--light-color-bg);
+    background-image: url(./images/textures/paper-texture-01.png);
+    background-blend-mode: multiply;
+}
+
+#about-section .greeting {
+    font-size: 4rem;
+    font-style: 900;
+
+    > span {
+        font-size: 10rem;
+        color: var(--dark-color-secondary);      
+        text-shadow: 2px 2px 5px var(--main-color);      
+    }
+} 
+
+#about-section .name {
+    font-size: 6rem;
+    font-weight:400;
+    color: var(--sub-color); 
+    text-decoration:underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 15px;
+    line-height: 0.8;
+} 
+
+#about-section .job {
+    font-family: var(--special02-font);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--sub-color);
+    letter-spacing: 0rem;
+    line-height: 2.2;
+    
+} 
+
+#about-section .intro-1 {
+    font-family: var(--content02-font);
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    
+    > span {
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: var(--accent-color);
+        text-shadow: 2px 2px 5px var(--main-color);  
+    }
+} 
+
+#about-section .intro-2 {
+    font-family: var(--content02-font);
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    color: var(--sub-color);
+} 
+
+#about-section .curved-svg-end {
+    fill: var(--section01-color);
+}
+/* ABOUT SECTION STYLING END */
+
+/* ============================== */
+
+/* EXPERIENCE SECTION STYLING START */
+#experience-section .curved-svg-start {
+    fill: var(--section01-color);
+}
+
+#experience-section {
+    background-image: url(./images/textures/paper-texture-02.png);
+    background-blend-mode: multiply;
+    background-color: var(--section03-color);
+    color: #fff;
+}
+
+#experience-content {
+    background-image: url(./images/experience/office-building.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+} 
+
+#experience-section .content {
+    background-color: rgba(0, 1, 31,0.9);
+}
+
+#experience-section h2 {
+    color: var(--dark-color-text);
+    font-family: var(--head01-font);
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+}
+
+#experience-content h3 {
+    color: var(--accent-color);
+    font-family: var(--head01-font);
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+#experience-content h4 {
+    font-family: var(--head02-font);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+#experience-content p {
+    font-family: var(--content01-font);
+    font-weight: 300;
+    font-size: .8rem;
+    line-height: 1.3;
+}
+
+#experience-content .content {
+    bottom: 10rem;
+}
+/* EXPERIENCE SECTION STYLING END */
+ 
+/* ============================== */
+
+/* PROJECTS SECTION STYLING START */
+#projects-section {
+    font-family: var(--head01-font);
+    color: var(--main-color);
+    background-image: url(./images/textures/paper-texture-01.png);
+    background-blend-mode: multiply;
+    background-color: var(--accent-color);
+} 
+
+#projects-section h2{
+    color: whitesmoke;
+    font-family: var(--head01-font);
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+}
+
+#projects-section h3{
+    color: whitesmoke;
+    font-family: var(--head02-font);
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+}
+
+#projects-section .card-title{
+    color: var(--main-color);
+    font-family: var(--head01-font);
+    font-weight: 400;
+}
+
+#projects-section p {
+    font-size: 0.75rem;
+    font-family: var(--content01-font);
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+#projects-section .card-time {
+    font-size: 0.6rem;
+    font-family: var(--content01-font);
+    font-weight: 100;
+}
+/* PROJECTS SECTION STYLING END */
+
+/* SKILLS SECTION STYLING START */
+#skills-section {
+    font-family: var(--head01-font);
+    color: rgb(0, 1, 31);
+    background-image: url(./images/textures/paper-texture-03.png);
+    background-blend-mode: multiply;
+    background-color: var(--section06-color);
+} 
+
+#skills-section h2{
+    color: var(--dark-color-text);
+    font-family: var(--head01-font);
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+}
+
+#skills-section .skill-card {
+    background-color: rgba(0, 1, 31,0.5);
+}
+
+#skills-section h3 {
+    color: var(--dark-color-text);
+    font-family: var(--head02-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+}
+
+#skills-section h4 {
+    color: var(--dark-color-text);
+    font-family: var(--content01-font);
+    font-weight: 700;
+    font-size: .75rem;
+}
+/* SKILLS SECTION STYLING START */
+
+/* CONTACT SECTION STYLING START */
+#contact-section {
+    font-family: 'Passion One', serif;
+    color: rgb(0, 1, 31);
+    background-image: url(./images/textures/paper-texture-01.png);
+    background-blend-mode: multiply;
+    background-color:#555;
+} 
+/* CONTACT SECTION STYLING START */
