@@ -95,22 +95,6 @@ table {
     /* Content Fonts in use */
     --content01-font: 'Roboto', sans-serif; 
     --content01-font: 'Roboto Mono', monospace;
-
-
-    :root[data-theme="light"] {
-        --text: #0a0c29;
-        --background: #dedef7;
-        --primary: #1f2a7a;
-        --secondary: #d575db;
-        --accent: #bf3192;
-      }
-      :root[data-theme="dark"] {
-        --text: #d7d9f5;
-        --background: #080820;
-        --primary: #8590e0;
-        --secondary: #822388;
-        --accent: #ce40a1;
-      }
 }
 
 * {
@@ -145,27 +129,23 @@ body {
     font-weight: 600;
 }
 
-/* .line {
-    border-width: 1.5rem;
-    color: #2196F3;
-    opacity: 1;
-    width: 8rem;
-} */
-
-/* .modal-backdrop {
-    z-index: -1;
-} */
+.dots {
+    width: 1rem;
+    height: 1rem;
+    background: var(--section03-color);
+}
 
 /* Fill Color */
 .fill-origin {
 	fill: var(--main-color);
 }
+/* Fill Color */
 /* GENERAL STYLING END */
 
 /* ============================== */
 
-/* PARALLAX STYLING START */
-#parallax {
+/* PARALLAX LANDING STYLING START */
+#landing {
     position: relative;
     z-index: 0;
     min-height: 75vh;
@@ -173,13 +153,13 @@ body {
     grid-template-areas: "stack";
 }
 
-#parallax > * {
+#landing > * {
     grid-area: stack;
     animation: parallax linear;
     animation-timeline: scroll();
 }
 
-#parallax > img {
+#landing > img {
     width: 100%;
 }
 
@@ -241,7 +221,7 @@ body {
         transform: translateY(calc(var(--parallax-speed) * 200px));
     }
 }
-/* PARALLAX STYLING END */
+/* PARALLAX LANDING STYLING END */
 
 /* ============================== */
 
@@ -265,14 +245,6 @@ body {
 
 /* ============================== */
 
-/* FADE-IN ANIMTION START */
-/* .animate-fade {
-    opacity: 0;
-  } */
-/* FADE-IN ANIMTION END */
-
-/* ============================== */
-
 /* SVG IRREGULAR SHAPE EFFECT STYLING START */
 .curved-svg-start {
     display: block;
@@ -286,6 +258,8 @@ body {
 /* SVG IRREGULAR SHAPE EFFECT STYLING END */
 
 /* ============================== */
+
+
 
 /* HERO SECTION STYLING START */
 #hero-section::after {
@@ -309,14 +283,99 @@ body {
     margin-bottom: 13rem;
 }
 
-.hero-title button{
+/* Explore Button */
 
-	font-size: 2rem;
-	line-height: 0;
-	font-weight: 00;
+#hero-section .container {
+    width: 334px;
 }
 
-	/* HERO SECTION MEDIA QUERIES START */
+.explore {
+    font-family: var(--special02-font);
+    font-weight: 400;
+    font-size: 1.3rem;
+    overflow: hidden;
+    position: relative;
+    color: whitesmoke;
+    box-shadow: 0 0 5px var(--section03-color), 0 0 25px var(--section03-color);
+    width: 100%;
+    -webkit-transition: background-position .7s,box-shadow .4s;
+    transition: background-position .7s,box-shadow .4s;
+    background-size: 110%;
+}
+
+  .explore:hover {
+    background-position: 0% 30%;
+}
+  
+  .explore:hover:after {
+    right: -55px;
+    -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
+    transition: right .4s,-webkit-transform 30s .2s linear;
+    transition: right .4s,transform 30s .2s linear;
+    transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
+}
+
+.explore:before, .explore:after {
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+}
+
+.explore:before {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    font-size: 25px;
+    left: 19px;
+    top: 26px;
+}
+
+.explore:after {
+    -webkit-transition: right .4s, -webkit-transform .2s;
+    transition: right .4s, -webkit-transform .2s;
+    transition: right .4s, transform .2s;
+    transition: right .4s, transform .2s, -webkit-transform .2s;
+    font-size: 100px;
+    opacity: .3;
+    right: -120px;
+    top: -13.5px;
+}
+
+.explore {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(115, 25, 65, 1)), to(var(--section04-color))), url("http://blog.teamthinklabs.com/wp-content/uploads/2012/09/codepen-460x253.png");
+    background-image: linear-gradient(to bottom, rgba(115, 25, 65, 1), var(--section04-color)), url("http://blog.teamthinklabs.com/wp-content/uploads/2012/09/codepen-460x253.png");
+}
+
+.explore:hover {
+    box-shadow: 0 0 5px var(--accent-color), 0 0 25px var(--accent-color), 0 0 50px var(--accent-color) !important;
+}
+
+.explore:hover:after {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+  
+.explore:hover:before {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+.explore:after, .explore:before {
+    content: "";
+}
+
+.explore a {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 5px rgba(0, 1, 31, 0.2);
+    color: whitesmoke;
+}
+
+.explore b {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+/* Explore Button */
+
+/* HERO SECTION MEDIA QUERIES START */
 @media only screen and (max-width: 1200px){ 
 
 	.hero-title {
@@ -340,6 +399,10 @@ body {
 		font-size: 4rem;
         padding-inline: 0rem;
 	}
+
+    .hero-title button {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 576px){ 
@@ -347,8 +410,12 @@ body {
 		font-size: 2.5rem;
 		letter-spacing: 0.2rem;
 	}
+
+    .hero-title button {
+        font-size: 0.75rem;
+    }
 }	
-	/* HERO SECTION MEDIA QUERIES END */
+/* HERO SECTION MEDIA QUERIES END */
 /* HERO SECTION STYLING END */
 
 /* ============================== */
@@ -378,6 +445,7 @@ body {
     color: white;
     border-radius: 0 5px 5px 0;
     text-shadow: 2px 2px 5px rgba(0, 1, 31, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 1, 31, 0.5);
   }
   
 #sidenav a:hover {
@@ -434,25 +502,84 @@ body {
     background-blend-mode: multiply;
 }
 
-#about-section .greeting {
-    font-size: 4rem;
-    font-style: 900;
+/* Drop Greeting Text Animation */
+.drop-greeting {    
+    text-shadow: 2px 2px 5px rgba(0, 1, 31,0.75);  
+    font-size: 10rem;
+    letter-spacing: 0.75rem;
+    opacity: 0.9;
+}
 
-    > span {
-        font-size: 10rem;
-        color: var(--dark-color-secondary);      
-        text-shadow: 2px 2px 5px var(--main-color);      
+.letter-h {
+    opacity: 0;
+    animation: drop 0.6s linear forwards;
+    color: rgb(115, 25, 65);
+}
+
+.letter-e {
+    opacity: 0;
+    animation: drop 0.6s linear forwards 0.2s;
+    color: rgb(140, 30, 80);           
+}
+
+.letter-y {
+    opacity: 0;
+    animation: drop 0.6s linear forwards 0.4s;
+    color: rgb(160, 25, 90);      
+}
+
+.letter-l {
+    opacity: 0;
+    animation: drop 0.6s linear forwards 0.6s;
+    color: rgb(180, 35, 100);
+}
+
+.letter-o {
+    opacity: 0;
+    animation: drop 0.6s linear forwards 0.8s;
+    color: rgb(190, 40, 110);
+}
+
+.exclaim {
+    opacity: 0;
+    animation: drop 0.6s linear forwards 1s;
+    color: rgb(195, 40, 110);
+}
+
+
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
     }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#about-section .greeting {
+    font-size: 3.5rem;
+    font-style: 900;
 } 
+/* Drop Greeting Text Animation */
 
 #about-section .name {
     font-size: 6rem;
     font-weight:400;
     color: var(--sub-color); 
-    text-decoration:underline;
-    text-decoration-color: var(--accent-color);
-    text-underline-offset: 15px;
-    line-height: 0.8;
 } 
 
 #about-section .job {
@@ -461,21 +588,41 @@ body {
     font-weight: 900;
     color: var(--sub-color);
     letter-spacing: 0rem;
-    line-height: 2.2;
-    
+    line-height: 1;
 } 
+
+.typing {
+    width: 100%;
+    animation: typing 5s steps(43), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    border-color: var(--main-color);
+}
+  
+@keyframes typing {
+    from {
+      width: 0
+    }
+}
+      
+@keyframes blink {
+    50% {
+      border-color: transparent
+    }
+}
 
 #about-section .intro-1 {
     font-family: var(--content02-font);
     font-weight: 400;
     font-size: 2rem;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     
     > span {
         text-transform: uppercase;
         font-size: 3rem;
-        color: var(--accent-color);
-        text-shadow: 2px 2px 5px var(--main-color);  
+        color: var(--section03-color);
+        text-shadow: 2px 2px 2px rgba(0, 1, 31, 0.6);  
     }
 } 
 
@@ -527,7 +674,7 @@ body {
 #experience-content h3 {
     color: var(--accent-color);
     font-family: var(--head01-font);
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 0.3rem;
 }
 
@@ -593,6 +740,73 @@ body {
     font-family: var(--content01-font);
     font-weight: 100;
 }
+
+.content-gallery {
+    position: relative;
+    width: 90%;
+    max-width: 560px;
+    overflow: hidden;
+}
+  
+.content-gallery .content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+  
+.content-gallery:hover .content-overlay{
+    opacity: 1;
+}
+  
+.content-image{
+    height: 100%;
+    width: 100%;
+}
+  
+.content-details {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+  
+.content-gallery:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+  
+.content-details h3{
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+  
+.content-details p{
+    color: #fff;
+    font-size: 0.8em;
+}
+  
+.fadeIn-bottom{
+    top: 80%;
+}
 /* PROJECTS SECTION STYLING END */
 
 /* SKILLS SECTION STYLING START */
@@ -633,10 +847,47 @@ body {
 
 /* CONTACT SECTION STYLING START */
 #contact-section {
-    font-family: 'Passion One', serif;
-    color: rgb(0, 1, 31);
+    font-family: var(--content01-font);
+    color: var(--main-color);
     background-image: url(./images/textures/paper-texture-01.png);
     background-blend-mode: multiply;
     background-color:#555;
 } 
+
+#contact-section h2 {
+    color: whitesmoke;
+    font-family: var(--head01-font);
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+}
+
+#contact-section h3 {
+    font-family: var(--special02-font);
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: whitesmoke;
+} 
+
+#contact-section .socials {
+    color: var(--dark-color-text);
+    font-size: 4rem;
+}
+
+#contact-section .socials:hover {
+    color: var(--section03-color);
+    font-size: 5rem;
+}
+
+#contact-section h4 {
+    font-family: var(--special03-font);
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    line-height: 1.5;
+    color: whitesmoke;
+} 
+
+.form-section {
+    background-color: rgba(0, 1, 31, 0.75);
+}
 /* CONTACT SECTION STYLING START */
+

@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b4bd7455b7.js" crossorigin="anonymous"></script>
 
         <!-- FADE IN ANIMATION LINK -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
@@ -29,15 +30,13 @@
 
     <body>
         <!--====== PARALLAX HERO SECTION START ======-->
-        <header id="parallax" class="top">
+        <header id="landing">
 
             <!-- PARALLAX HERO TITLE -->
-            <div id="hero-section" class="d-flex flex-column justify-content-end align-items-center text-center text-light text-uppercase">
-                <div class="hero-title">
-                    <h1>Transforming <span class="d-block">visions into</span> virtual realities</h1>
-                    <a href="#about-link">
-                        <button type="button" class="btn btn-primary btn-lg my-2 px-4 py-4 rounded text-center" href="#about-link">Explore</button>
-                    </a>
+            <div id="hero-section" class="hero-title d-flex flex-column justify-content-end align-items-center text-center text-light text-uppercase">
+                <h1>Transforming <span class="d-block">visions into</span> virtual realities</h1>
+                <div class="container">
+                    <button class="explore text-uppercase border-0 rounded px-5 py-4 "><a href="#about-link">Learn <b>About Me</b></a></button>
                 </div>
             </div>
 
@@ -101,7 +100,7 @@
                 </a>
                 <a href="#contact-link" id="sidenav-contact" class="d-flex justify-content-between align-items-center">
                     <div>
-                        Contact
+                        Contact Me
                     </div>
                     <div>
                         <i class="mdi-content-mail small"></i>
@@ -115,16 +114,27 @@
                 <svg class="curved-svg-start fill-origin" viewBox="0 0 1440 320">
                     <path fill-opacity="1" d="M0,320L288,64L576,192L864,160L1152,128L1440,160L1440,0L1152,0L864,0L576,0L288,0L0,0Z"></path>
                 </svg>
-                <div id="about-link" class="container-fluid px-5">
-                    <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
-                        <div class="col-12 col-md-6 order-2 order-md-1">
-                            <h2 class="greeting text-uppercase"><span class="d-block">Heylo!</span>My name is.</h2>
+                <div id="about-link" class="container-fluid px-5 py-4">
+                    <div class="row px-md-5 d-flex align-items-center text-center text-lg-start">
+                        <div class="col-12 col-lg-6 order-2 order-lg-1">
+                            <div class="drop-greeting d-flex">
+                                <div class="letter-h">H</div>
+                                <div class="letter-e">E</div>
+                                <div class="letter-y">Y</div>
+                                <div class="letter-l">L</div>
+                                <div class="letter-o">O</div>
+                                <div class="exclaim">!</div>
+                            </div>
+                            <h2 class="greeting text-uppercase">My name is.</h2>
                             <h2 class="name text-uppercase">Norven Caracas</h2>
-                            <h3 class="job mt-2">&lt;Full-Stack Developer&gt; <span class="d-none d-md-inline">|</span> <span class="d-block d-md-inline">Graphic Artist</span>  </h3>
+                            <hr class="p-0 m-0">
+                            <div class="typing p-0 mt-2">
+                                <h3 class="job mt-0">&lt;Full-Stack Web Developer&gt; <span class="d-none d-lg-inline">|</span> <span class="d-block d-lg-inline">Graphic Artist</span></h3>
+                            </div>
                             <p class="intro-1 p-0 mt-4">I am a <span>creative thinker</span> with a passion for creating beautiful fun things.</p>
                             <p class="intro-2 p-0 mt-2">I've always sought out opportunities and challenges that pushes my creative drive and stirs my technical mind.</p>
                         </div>
-                        <div class="col-12 col-md-6 order-1 order-md-2">
+                        <div class="col-12 col-lg-6 order-1 order-lg-2">
                             <img class="img-fluid" src="images/profile/norven-profile-01.png" alt="Norven's Profile">
                         </div>
                     </div>
@@ -146,10 +156,14 @@
                 <hr class="text-light">
                 <div id="experience-content" class="container-fluid p-0 m-0">
                     <div class="d-flex flex-column align-items-center align-items-lg-start mx-lg-5">
-                        <div class="content col-8 col-lg-6 p-5 mt-5 mx-lg-5 rounded">
+                        <div class="content col-8 col-lg-6 p-5 mt-3 mx-lg-5 rounded">
+                            <div class="d-flex justify-content-center align-items-center py-3">
+                                <div class="dots rounded-circle mx-2"></div>
+                                <div class="dots rounded-circle mx-2"></div>
+                                <div class="dots rounded-circle mx-2"></div>
+                            </div>
                             <div>
-                                <hr class="line rounded">
-                                <h3 class="py-2">NEC Telecom Software Philippines</h3>
+                                <h3 class="py-2 mt-2">NEC Telecom Software Philippines</h3>
                                 <h4 class="py-2">Junior Programmer</h4>
                                 <p class="py-2">Developed impactful solutions in Unity 3D, leveraging my expertise in C# and Python. I worked for the XR and 3D Development Team in the implementing and reviewing of code for LiDAR technologies ensuring successful integration of 3D solutions.</p>
                             </div>
@@ -330,14 +344,29 @@
                         <div class="col-12">
                             <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
                                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                                    <img
-                                        src="./images/gallery/graphic-sample-01.png"
-                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
-                                    />
-                                    <img
-                                        src="./images/gallery/graphic-sample-02.png"
-                                        class="w-100 shadow-1-strong rounded mb-4 shadow"
-                                    />
+                                    
+                                    <div class="content-gallery rounded mb-4 w-100 h-100">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image img-fluid" src="./images/gallery/graphic-sample-01.png" alt="">
+                                            <div class="content-details fadeIn-bottom text-center">
+                                                <h3 class="content-title text-uppercase mb-2">This is a title</h3>
+                                                <p class="content-text">This is a short description</p>
+                                            </div>
+                                        </a>
+                                    </div>     
+                                    
+                                    <div class="content-gallery rounded mb-4 w-100 h-100">
+                                        <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                                            <div class="content-overlay"></div>
+                                            <img class="content-image img-fluid" src="./images/gallery/graphic-sample-02.png" alt="">
+                                            <div class="content-details fadeIn-bottom text-center">
+                                                <h3 class="content-title text-uppercase mb-2">This is a title</h3>
+                                                <p class="content-text">This is a short description</p>
+                                            </div>
+                                        </a>
+                                    </div>  
+
                                     <img
                                         src="./images/gallery/graphic-sample-03.jpg"
                                         class="w-100 shadow-1-strong rounded mb-4 shadow"
@@ -408,7 +437,7 @@
                         <h2 class="guide text-center text-uppercase px-5 mt-5">Skills</h2>
                         <hr class="text-light">
 
-                        <div class="col-12 my-5">
+                        <div class="col-12 py-3 my-5">
                             <div class="row d-flex justify-content-center align-items-stretch">
                                 <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                     
@@ -526,7 +555,7 @@
                 </div>
         
                 <svg class="curved-svg-end fill-origin" viewBox="0 0 1440 319">
-                    <path fill-opacity="1" d="M0,288L205.7,64L411.4,256L617.1,192L822.9,256L1028.6,160L1234.3,192L1440,128L1440,320L1234.3,320L1028.6,320L822.9,320L617.1,320L411.4,320L205.7,320L0,320Z"></path>
+                    <path fill-opacity="1" d="M0,32L480,96L960,96L1440,32L1440,320L960,320L480,320L0,320Z"></path>
                 </svg>
             </Section>
             <!--====== SKILLS SECTION END ======-->
@@ -541,69 +570,69 @@
 
                     <div class="row px-md-5 d-flex align-items-center text-center text-md-start">
 
-                        <h2 class="guide text-center text-uppercase px-5 mt-5">Contact</h2>
+                        <h2 class="guide text-center text-uppercase px-5 mt-5">Contact Me</h2>
                         <hr class="text-light">
 
                         <div class="col-12">
-                            <div class="row justify-content-center mb-5 text-dark">
-                                <div class="col-3 col-md-1">
-                                    <a href="https://www.facebook.com/profile.php?id=100085701498879" class="text-dark" id="facebook">
-                                        <i class="fab fa-facebook" aria-hidden="true"></i>
-                                    </a>
+                            <div class="d-flex flex-column justify-content-center align-items-center mb-5 text-dark">
+                                <div class="text-center text-uppercase pt-5 pb-4">
+                                    <h3 class="sub-guide">&lt; Socials &gt;</h3>
                                 </div>
-                                <div class="col-3 col-md-1">
-                                    <a href="https://www.linkedin.com/in/charles-babbage-8291a6211/" class="text-dark" id="linkedIn">
-                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="col-3 col-md-1">
-                                    <a href="https://gitlab.com/cbabbage0991" class="text-dark" id="gitlab">
-                                        <i class="fab fa-gitlab" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                                <div class="col-3 col-md-1">
-                                    <a href="https://github.com/cbabbage0991" class="text-dark" id="github">
-                                        <i class="fab fa-github" aria-hidden="true"></i>                    
-                                    </a>
-                                </div>
+                                <div class="d-flex flex-row mt-2">
+                                    <div class="mx-3">
+                                        <a href="https://www.linkedin.com/in/norven-ephraim-caracas-03432915a/" id="linkedIn" class="socials">
+                                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="mx-3">
+                                        <a href="https://www.behance.net/d3c1pher" id="behance" class="socials">
+                                            <i class="fa-brands fa-square-behance" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="mx-3">
+                                        <a href="https://gitlab.com/norven.caracas" id="gitlab" class="socials">
+                                            <i class="fab fa-gitlab" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="mx-3">
+                                        <a href="https://github.com/D3c1pher" id="github" class="socials">
+                                            <i class="fab fa-github" aria-hidden="true"></i>                    
+                                        </a>
+                                    </div>
+                                </div>      
                             </div>
                         </div>
+                        <hr class="text-light">
+                        <div class="col-12 mt-5">
+                            <h4 class="text-uppercase text-center">Let's Work Together!</h4>
+                        </div>
                         
-                        <div class="col-12 col-md-6 bg-primary rounded pt-4 pb-4">
+                        <div class="form-section col-12 col-md-6 rounded p-5">
 
                             <!-- Form Section -->
                             <form id="form-col">
                                 
-                                <div class="form-group">
+                                <div class="form-group my-4">
                                     <label for="name">Name:</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    <input type="text" class="form-control my-2 px-2" id="name" placeholder="Enter your name">
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group my-4">
                                     <label for="email">Email Address:</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    <input type="email" class="form-control my-2 px-2" id="email" placeholder="Enter your email">
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group my-4">
                                     <label for="contact-number">Contact Number:</label>
-                                    <input type="number" class="form-control" id="contact-number" placeholder="Enter your contact number">
+                                    <input type="tel" id="contact-number" class="form-control my-2 px-2" name="contact-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Enter your contact number">
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="concern">Concern:</label>
-                                    <select class="form-control" id="concern">
-                                        <option>Quotation</option>
-                                        <option>Appointment</option>
-                                        <option>Follow-Up</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
+                                <div class="form-group my-4">
                                     <label for="message">Message:</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                                    <textarea class="form-control my-2 px-2" id="message" rows="5" placeholder="Enter your message"></textarea>
                                 </div>
 
-                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalDiv">
+                                <button type="button" class="btn btn-dark my-2" data-toggle="modal" data-target="#modalDiv">
                                     Submit
                                 </button>
                             </form>
