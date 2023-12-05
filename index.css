@@ -259,8 +259,6 @@ body {
 
 /* ============================== */
 
-
-
 /* HERO SECTION STYLING START */
 #hero-section::after {
     content: "";
@@ -284,7 +282,6 @@ body {
 }
 
 /* Explore Button */
-
 #hero-section .container {
     width: 334px;
 }
@@ -508,6 +505,15 @@ body {
     font-size: 10rem;
     letter-spacing: 0.75rem;
     opacity: 0.9;
+}
+
+@media only screen and (max-width: 992px){ 
+
+	.drop-greeting {   
+        font-size: 8rem;
+        letter-spacing: 0.75rem;
+        opacity: 0.9;
+    }
 }
 
 .letter-h {
@@ -741,6 +747,14 @@ body {
     font-weight: 100;
 }
 
+#projects-section .link-icons {
+    color: var(--section02-color);
+}
+
+#projects-section .link-icons:hover {
+    color: var(--accent-color);
+}
+
 .content-gallery {
     position: relative;
     width: 90%;
@@ -809,6 +823,8 @@ body {
 }
 /* PROJECTS SECTION STYLING END */
 
+/* ============================== */
+
 /* SKILLS SECTION STYLING START */
 #skills-section {
     font-family: var(--head01-font);
@@ -843,7 +859,9 @@ body {
     font-weight: 700;
     font-size: .75rem;
 }
-/* SKILLS SECTION STYLING START */
+/* SKILLS SECTION STYLING END */
+
+/* ============================== */
 
 /* CONTACT SECTION STYLING START */
 #contact-section {
@@ -886,8 +904,42 @@ body {
     color: whitesmoke;
 } 
 
+@media only screen and (max-width: 1200px){ 
+    
+    #contact-section h4 {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        line-height: 1.5;
+    } 
+}
+
+#contact-section h5 {
+    font-family: var(--head02-font);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    line-height: 1.5;
+    color: whitesmoke;
+} 
+
 .form-section {
     background-color: rgba(0, 1, 31, 0.75);
 }
-/* CONTACT SECTION STYLING START */
+/* CONTACT SECTION STYLING END */
 
+/* ============================== */
+
+/* FOOTER SECTION STYLING START */
+footer {
+    background-color: var(--main-color);
+    color: whitesmoke;
+    font-family: var(--head02-font);
+}
+
+footer a {
+    color: var(--accent-color);
+    font-family: var(--head02-font);
+    font-weight: 900;
+    font-size: 2rem;
+}
+/* FOOTER SECTION STYLING END */
