@@ -102,8 +102,6 @@ table {
 }
 	
 html {
-	/* color-scheme: dark; */
-    /* color-scheme: light; */
 	scroll-behavior: smooth;
 }
 	
@@ -146,8 +144,7 @@ body {
 
 /* PARALLAX LANDING STYLING START */
 #landing {
-    position: relative;
-    z-index: 0;
+    contain: paint;
     min-height: 75vh;
     display: grid;
     grid-template-areas: "stack";
@@ -173,7 +170,7 @@ body {
 }
 
 #parallax-bg {
-    --parallax-speed: 0;
+    --parallax-speed: -2;
     z-index: 1;
     min-height: 100%;
     width: 100%;
@@ -222,26 +219,6 @@ body {
     }
 }
 /* PARALLAX LANDING STYLING END */
-
-/* ============================== */
-
-/* NO PARALLAX STYLING START */
-@media only screen and (min-width: 768px) { 
-    #parallax-bg {
-    --parallax-speed: -1;
-    }
-}
-
-@media only screen and (max-width: 767px){ 
-    .no-display {
-        display: none;
-    }
-
-    .brand-logo {
-        justify-self: center;
-    }
-}
-/* NO PARALLAX STYLING END */
 
 /* ============================== */
 
@@ -419,7 +396,7 @@ body {
 
 /* MAIN CONTENT STYLING START */
 .main-content {
-    position: relative;
+    contain: paint;
     background: var(--main-color);
     padding-block: 1rem;
     width: 100%;
@@ -482,7 +459,21 @@ body {
     top: 440px;
     background-color: var(--section06-color);
 }
+/* BACK TO TOP BUTTON STYLING START */
+
+/* ============================== */
+
 /* MENU NAVIGATION MOBILE STYLING START */
+#btn-back-to-top {
+    background-color: var(--section02-color);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    text-shadow: 2px 2px 5px rgba(0, 1, 31, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 1, 31, 0.5);
+}
+/* BACK TO TOP BUTTON STYLING END */
 
 /* ============================== */
 
@@ -517,63 +508,27 @@ body {
 }
 
 .letter-h {
-    opacity: 0;
-    animation: drop 0.6s linear forwards;
     color: rgb(115, 25, 65);
 }
 
 .letter-e {
-    opacity: 0;
-    animation: drop 0.6s linear forwards 0.2s;
     color: rgb(140, 30, 80);           
 }
 
 .letter-y {
-    opacity: 0;
-    animation: drop 0.6s linear forwards 0.4s;
     color: rgb(160, 25, 90);      
 }
 
 .letter-l {
-    opacity: 0;
-    animation: drop 0.6s linear forwards 0.6s;
     color: rgb(180, 35, 100);
 }
 
 .letter-o {
-    opacity: 0;
-    animation: drop 0.6s linear forwards 0.8s;
     color: rgb(190, 40, 110);
 }
 
 .exclaim {
-    opacity: 0;
-    animation: drop 0.6s linear forwards 1s;
     color: rgb(195, 40, 110);
-}
-
-
-@keyframes drop {
-    0% {
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    65% {
-        transform: translateY(-17px);
-        opacity: 1;
-    }
-    75% {
-        transform: translateY(-22px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
 }
 
 #about-section .greeting {
@@ -588,35 +543,15 @@ body {
     color: var(--sub-color); 
 } 
 
-#about-section .job {
+#about-section .job a{
     font-family: var(--special02-font);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--sub-color);
     letter-spacing: 0rem;
     line-height: 1;
+    text-decoration: none;
 } 
-
-.typing {
-    width: 100%;
-    animation: typing 5s steps(43), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    border-color: var(--main-color);
-}
-  
-@keyframes typing {
-    from {
-      width: 0
-    }
-}
-      
-@keyframes blink {
-    50% {
-      border-color: transparent
-    }
-}
 
 #about-section .intro-1 {
     font-family: var(--content02-font);
@@ -655,12 +590,14 @@ body {
 #experience-section {
     background-image: url(./images/textures/paper-texture-02.png);
     background-blend-mode: multiply;
+    background-size: cover;
     background-color: var(--section03-color);
     color: #fff;
 }
 
 #experience-content {
     background-image: url(./images/experience/office-building.png);
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
@@ -896,7 +833,7 @@ body {
     font-size: 5rem;
 }
 
-#contact-section h4 {
+#contact-section h4 a{
     font-family: var(--special03-font);
     font-size: 5rem;
     letter-spacing: 0.5rem;
@@ -904,9 +841,15 @@ body {
     color: whitesmoke;
 } 
 
-@media only screen and (max-width: 1200px){ 
+#contact-section h4 a:hover {
+    color: var(--accent-color);
+    padding-top: 1rem;
+    transition-duration: 0.2s;
+  }
+
+@media only screen and (max-width: 1200px) { 
     
-    #contact-section h4 {
+    #contact-section h4 a{
         font-size: 2rem;
         letter-spacing: 0.5rem;
         line-height: 1.5;
@@ -921,6 +864,15 @@ body {
     line-height: 1.5;
     color: whitesmoke;
 } 
+
+@media only screen and (max-width: 1200px) { 
+    
+    #contact-section h5{
+        font-size: 1.5rem;
+        letter-spacing: .25rem;
+        line-height: 1.5;
+    } 
+}
 
 .form-section {
     background-color: rgba(0, 1, 31, 0.75);
