@@ -142,6 +142,146 @@ body {
 
 /* ============================== */
 
+/* PRELOADER STYLING START */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#loader-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    margin: -100px 0 0 -100px;
+    z-index: 1001;  
+    background-image: url(./images/preloader/school-student.gif);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    z-index: 1020;
+}
+
+#loader {
+    color: var(--dark-color-text);
+    font-family: var(--special02-font);
+    font-size: 2rem;
+
+    position: absolute;
+    left: 20%;
+    top: 55%;
+    margin: -100px 0 0 -100px;
+    z-index: 1001;
+}
+
+span[class^="dot-"]{
+    opacity: 0;
+}
+.dot-one{
+animation: dot-one 2s infinite linear
+}
+.dot-two{
+animation: dot-two 2s infinite linear
+}
+.dot-three{
+animation: dot-three 2s infinite linear
+}
+@keyframes dot-one{
+0%{
+    opacity: 0;
+}
+15%{
+    opacity: 0;
+}
+25%{
+    opacity: 1;
+}
+100%{
+    opacity: 1;
+}
+}
+
+@keyframes dot-two{
+0%{
+    opacity: 0;
+}
+25%{
+    opacity: 0;
+}
+50%{
+    opacity: 1;
+}
+100%{
+    opacity: 1;
+}
+}
+
+@keyframes dot-three{
+0%{
+    opacity: 0;
+}
+50%{
+    opacity: 0;
+}
+75%{
+    opacity: 1;
+}
+100%{
+    opacity: 1;
+}
+}
+
+.loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;  
+    background: var(--main-color);
+    z-index: 1000;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.loader-section.section-left {
+    left: 0
+}
+
+.loader-section.section-right {
+    right: 0
+}
+
+.panel_left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all .7s .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all .7s .3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+}
+
+.panel_right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all .7s .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all .7s .3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+}
+
+.loaded-img {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all .3s 1s ease-out;
+    transition: all .3s 1s ease-out
+}
+/* PRELOADER STYLING END */
+
+/* ============================== */
+
 /* PARALLAX LANDING STYLING START */
 #landing {
     contain: paint;

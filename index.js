@@ -1,3 +1,21 @@
+/* PRELOADER FUNCTION START */
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#loader-img').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
+})
+// 
+document.onreadystatechange = function() {
+  if (document.readyState === "complete") {
+      $("#panel_left").addClass("panel_left");
+      $("#panel_right").addClass("panel_right");
+      $("#loader").addClass("loaded-circle");
+      $("#loader-img").addClass("loaded-img");
+      $("#preloader").addClass("loaded-img");
+  }
+}
+/*RELOADER FUNCTION END */
+
 /* ANIMATE ON SCROLL FUNCTION START */
 // You can also pass an optional settings object
 // below listed default settings
